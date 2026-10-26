@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#12372a">
+<title>WardVoice | Karura Ward Opinion Poll</title>
+<style>
+:root{--green:#12372a;--green2:#1e5a43;--cream:#f6f5ef;--ink:#18231d;--muted:#647168;--line:#dfe5df;--gold:#e8bd58}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}
+header{background:var(--green);color:#fff;padding:20px 18px 42px}.top,.hero,main{max-width:920px;margin-left:auto;margin-right:auto}.top{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-weight:850;font-size:1.2rem}.pill{font-size:.76rem;border:1px solid #ffffff55;border-radius:99px;padding:5px 10px;color:#e8f3eb}.hero{margin-top:28px}.eyebrow{color:var(--gold);font-size:.76rem;font-weight:800;letter-spacing:1.3px;text-transform:uppercase}.hero h1{font-size:clamp(2rem,6vw,3.3rem);line-height:1.06;max-width:680px;margin:10px 0 14px}.hero p{color:#dbe7df;max-width:650px;margin:0}
+main{margin-top:-20px;padding:0 16px 42px}.notice{background:#fff8e5;border:1px solid #f1dfaa;border-radius:14px;padding:13px 15px;font-size:.9rem;margin-bottom:16px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:16px;box-shadow:0 6px 20px #17291d08}.head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:14px}.head h2{font-size:1.2rem;margin:0}.head p{font-size:.88rem;color:var(--muted);margin:5px 0 0}.ward{font-size:.78rem;background:#edf4ef;color:var(--green2);padding:6px 9px;border-radius:8px;white-space:nowrap}.candidate-list{display:grid;grid-template-columns:1fr;gap:10px}.candidate{display:flex;align-items:center;gap:12px;width:100%;padding:13px;border:1.5px solid var(--line);border-radius:14px;background:white;text-align:left;color:inherit;cursor:pointer}.candidate:hover{border-color:#80a891}.candidate.selected{border-color:var(--green2);background:#f0f7f2;box-shadow:0 0 0 2px #1e5a4315}.avatar{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#e9eee9;color:var(--green);font-weight:800;flex-shrink:0}.info{flex:1}.name{font-weight:750}.meta{font-size:.82rem;color:var(--muted)}.provisional{display:inline-block;margin-top:5px;font-size:.69rem;font-weight:750;color:#7b5712;background:#fff2ce;border-radius:5px;padding:2px 6px}.radio{width:21px;height:21px;border:1.5px solid #aab5ac;border-radius:50%;display:grid;place-items:center;flex-shrink:0}.selected .radio{border-color:var(--green2)}.selected .radio:after{content:"";width:11px;height:11px;background:var(--green2);border-radius:50%}
+label{display:block;font-size:.9rem;font-weight:650;margin-bottom:7px}input[type=tel]{width:100%;padding:13px 14px;border:1px solid #cfd8d0;border-radius:10px;font:inherit;background:#f7f8f6}input:focus{outline:3px solid #1e5a4325;border-color:var(--green2)}.help{font-size:.82rem;color:var(--muted);margin:7px 0 0}.btn{display:block;width:100%;border:0;border-radius:11px;background:var(--green);color:white;font-weight:750;font-size:1rem;padding:14px 16px;margin-top:16px;cursor:pointer}.btn:disabled{opacity:.42;cursor:not-allowed}.status{display:none;margin-top:14px;padding:13px;border-radius:10px;background:#edf4ef;color:var(--green);font-size:.9rem}.status.show{display:block}.consent{display:flex;gap:10px;align-items:flex-start;font-size:.84rem;color:var(--muted);margin-top:14px}.consent input{margin-top:5px}.steps{display:grid;grid-template-columns:1fr;gap:10px}.step{background:#f7f9f6;border-radius:12px;padding:13px}.step b{display:block;font-size:.87rem;margin-bottom:4px}.step span{font-size:.8rem;color:var(--muted)}footer{text-align:center;padding:24px 16px;color:var(--muted);font-size:.8rem}
+@media(min-width:650px){.candidate-list{grid-template-columns:1fr 1fr}.card{padding:24px}.hero{padding:0 18px}.steps{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<header>
+  <div class="top"><div class="brand">◈ WardVoice</div><div class="pill">Independent opinion poll</div></div>
+  <section class="hero">
+    <div class="eyebrow">Karura Ward · Westlands Constituency · Nairobi County</div>
+    <h1>Your voice. Your ward. Your opinion.</h1>
+    <p>Explore the provisional entries below and indicate your preference for the MCA position in Karura Ward. Candidate details must be verified before this poll is publicly launched.</p>
+  </section>
+</header>
+<main>
+  <div class="notice"><strong>Prototype notice:</strong> This is an independent opinion-poll demo, not an official election or IEBC service. The listed names are provisional and are not confirmation of official candidacy. This demo does not send OTPs, save responses, or count real votes.</div>
+  <section class="card">
+    <div class="head"><div><h2>Who would you prefer as MCA?</h2><p>Select one option. All candidate entries are marked provisional pending verification.</p></div><div class="ward">Karura Ward</div></div>
+    <div class="candidate-list" id="candidates">
+      <button class="candidate" type="button" data-name="Sandra Mbuvi (Thicky Sandra)" aria-pressed="false"><span class="avatar">SM</span><span class="info"><span class="name">Sandra Mbuvi (Thicky Sandra)</span><br><span class="meta">Candidate information pending verification</span><br><span class="provisional">PROVISIONAL ENTRY</span></span><span class="radio"></span></button>
+      <button class="candidate" type="button" data-name="Kamau Thuo Fiunifiu" aria-pressed="false"><span class="avatar">KT</span><span class="info"><span class="name">Kamau Thuo Fiunifiu</span><br><span class="meta">Candidate information pending verification</span><br><span class="provisional">PROVISIONAL ENTRY</span></span><span class="radio"></span></button>
+      <button class="candidate" type="button" data-name="Mushi Duale" aria-pressed="false"><span class="avatar">MD</span><span class="info"><span class="name">Mushi Duale</span><br><span class="meta">Candidate information pending verification</span><br><span class="provisional">PROVISIONAL ENTRY</span></span><span class="radio"></span></button>
+      <button class="candidate" type="button" data-name="Undecided / Other" aria-pressed="false"><span class="avatar">?</span><span class="info"><span class="name">Undecided / Other</span><br><span class="meta">I have not chosen / another preference</span></span><span class="radio"></span></button>
+    </div>
+    <div style="margin-top:20px"><label for="phone">Phone verification</label><input id="phone" type="tel" placeholder="OTP verification will be enabled later" disabled><p class="help">Not connected yet. Do not enter real personal information into this demo.</p></div>
+    <label class="consent"><input type="checkbox" id="consent"><span>I understand this is an independent opinion poll, not an official election, and my selection will not be saved in this demo.</span></label>
+    <button class="btn" id="submit" disabled>Preview selection</button>
+    <div class="status" id="status" role="status"></div>
+  </section>
+  <section class="card">
+    <div class="head"><div><h2>Planned live voting flow</h2><p>These steps need to be built before collecting real responses.</p></div></div>
+    <div class="steps"><div class="step"><b>01 · Verify</b><span>Send a one-time code using an SMS provider and validate it on the server.</span></div><div class="step"><b>02 · Submit privately</b><span>Check one response per poll while keeping identity records separate from ballot choices.</span></div><div class="step"><b>03 · Publish totals</b><span>Show aggregated results with poll dates, methodology and limitations.</span></div></div>
+  </section>
+  <section class="card">
+    <h2 style="font-size:1.08rem;margin-top:0">Privacy, security and fairness</h2>
+    <p style="font-size:.9rem;color:var(--muted)">Phone verification shows access to a phone number; it does not prove ward residency or voter eligibility. The live service should minimise personal data, separate phone verification from ballot choices, protect admin access, limit OTP requests, and disclose the poll's methodology. Avoid publishing identifiable voting choices.</p>
+  </section>
+</main>
+<footer>WardVoice · Karura Ward, Westlands Constituency, Nairobi County<br>Independent opinion poll · Not an official election</footer>
+<script>
+const options=[...document.querySelectorAll('.candidate')];let chosen='';
+const consent=document.getElementById('consent'),submit=document.getElementById('submit'),status=document.getElementById('status');
+function update(){submit.disabled=!(chosen&&consent.checked)}
+options.forEach(btn=>btn.addEventListener('click',()=>{chosen=btn.dataset.name;options.forEach(x=>{x.classList.toggle('selected',x===btn);x.setAttribute('aria-pressed',x===btn?'true':'false')});update();status.classList.remove('show')}));
+consent.addEventListener('change',update);
+submit.addEventListener('click',()=>{status.textContent='Demo only: you selected “'+chosen+'”. This choice has not been sent or saved. Connect a secure backend and phone verification before collecting real responses.';status.classList.add('show')});
+</script>
+</body>
+</html>
